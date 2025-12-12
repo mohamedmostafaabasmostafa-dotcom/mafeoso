@@ -26,7 +26,7 @@
         document.getElementById('downloadBtn').addEventListener('click', function(e) {
             e.preventDefault();
             
-const apkUrl = 'https://www.mediafire.com/file/54mp5t6g3x1ilid/مافيوسو.apk/file';
+const apkUrl = 'https://www.mediafire.com/file/yu932l4767rjo1c/مافيوسو+-+mafioso.apk/file';
 
 // دالة التحقق والتحميل التلقائي
 async function verifyAndDownloadApk() {
@@ -86,4 +86,5 @@ window.addEventListener("load", verifyAndDownloadApk);
                 }
             });
         });
+
         
