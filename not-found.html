@@ -8,17 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* ألوان النظام الجديدة: أسود + ذهبي + رصاصي */
-            --primary: #2F343A;            /* رمادي غامق أساسي */
-            --primary-dark: #050505;       /* شبه أسود للخلفيات الثقيلة */
-            --primary-light: #808080;      /* رمادي متوسط */
-            --secondary: #D4AF37;          /* ذهبي فاخر */
-            --secondary-dark: #B8941F;     /* ذهبي أغمق */
-            --secondary-light: #FFD700;    /* ذهبي لامع */
-            --background: #050505;         /* خلفية عامة داكنة جداً */
+            --primary: #2F343A;
+            --primary-dark: #050505;
+            --primary-light: #808080;
+            --secondary: #D4AF37;
+            --secondary-dark: #B8941F;
+            --secondary-light: #FFD700;
+            --background: #050505;
             --text: #E0E0E0;
             --white: #ffffff;
-            --card-bg: #15181D;            /* خلفية الكروت رمادي داكن مائل للأسود */
+            --card-bg: #15181D;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -53,7 +52,6 @@
             padding: 0 20px;
         }
 
-        /* الهيدر */
         header {
             position: fixed;
             top: 0;
@@ -153,7 +151,6 @@
             color: var(--secondary);
         }
 
-        /* محتوى صفحة 404 */
         .error-section {
             flex: 1;
             display: flex;
@@ -210,7 +207,6 @@
             margin-left: auto;
         }
 
-        /* تصميم الأيقونات */
         .error-icon {
             width: 120px;
             height: 120px;
@@ -253,7 +249,6 @@
             }
         }
 
-        /* الأزرار */
         .btn {
             display: inline-block;
             padding: 15px 35px;
@@ -297,7 +292,6 @@
             margin-top: 40px;
         }
 
-        /* نصائح مفيدة */
         .error-tips {
             margin-top: 40px;
             padding-top: 30px;
@@ -340,7 +334,6 @@
             font-size: 1.2rem;
         }
 
-        /* الفوتر */
         footer {
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
             color: var(--white);
@@ -356,7 +349,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* تأثيرات */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -368,7 +360,6 @@
             transform: translateY(0);
         }
 
-        /* تصميم متجاوب */
         @media (max-width: 992px) {
             .error-number {
                 font-size: 10rem;
@@ -460,7 +451,6 @@
     </style>
 </head>
 <body>
-    <!-- الهيدر -->
     <header id="header">
         <div class="container">
             <div class="header-content">
@@ -486,7 +476,6 @@
         </div>
     </header>
 
-    <!-- محتوى صفحة 404 -->
     <section class="error-section">
         <div class="container">
             <div class="error-content fade-in">
@@ -532,7 +521,6 @@
         </div>
     </section>
 
-    <!-- الفوتر -->
     <footer>
         <div class="container">
             <div class="footer-bottom">
@@ -542,7 +530,6 @@
     </footer>
 
     <script>
-        // تأثير الظهور التدريجي
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-in');
             
@@ -558,7 +545,6 @@
                 fadeInObserver.observe(element);
             });
             
-            // إضافة تأثير للعناصر التي تكون مرئية عند التحميل
             fadeElements.forEach(element => {
                 const rect = element.getBoundingClientRect();
                 if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -566,7 +552,6 @@
                 }
             });
             
-            // القائمة المتنقلة
             const mobileMenu = document.querySelector('.mobile-menu');
             const navLinks = document.querySelector('.nav-links');
             
@@ -576,7 +561,6 @@
                 mobileMenu.querySelector('i').classList.toggle('fa-times');
             });
             
-            // إغلاق القائمة عند النقر على رابط
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.addEventListener('click', () => {
                     navLinks.classList.remove('active');
@@ -585,7 +569,6 @@
                 });
             });
             
-            // تأثير الهيدر عند التمرير
             window.addEventListener('scroll', () => {
                 const header = document.getElementById('header');
                 if (window.scrollY > 100) {
